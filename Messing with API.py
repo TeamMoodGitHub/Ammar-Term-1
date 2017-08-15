@@ -6,7 +6,7 @@ import requests
 def championinfo(cID, uAPIkey):
     info = requests.get("https://euw1.api.riotgames.com/lol/platform/v3/champions/"+ cID +"/?api_key="+uAPIkey)
     return info.json()
-
+#function to check if the champ is free to play based on the chamions id
 def f2p(info):
     print [info][0]['freeToPlay']
 #required inputs for program to run    
